@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.magicworld.dccomics.ui.list.ListFragment"
+        android:label="Lista Superheroes"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.magicworld.dccomics.ui.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="superheroe"
+            app:argType="com.magicworld.dccomics.model.SuperheroeItem" />
+        <action
+            android:id="@+id/action_detailFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_imageZoomFragment"
+            app:destination="@id/imageZoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.magicworld.dccomics.ui.preference.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.magicworld.dccomics.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps"
+        >
+        <argument
+            android:name="superheroe"
+            app:argType="com.magicworld.dccomics.model.SuperheroeItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageZoomFragment"
+        android:name="com.magicworld.dccomics.ui.detail.ImageZoomFragment"
+        android:label="fragment_image_zoom"
+        tools:layout="@layout/fragment_image_zoom" >
+        <argument
+            android:name="superheroe"
+            app:argType="com.magicworld.dccomics.model.SuperheroeItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.magicworld.dccomics.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.magicworld.dccomics.ui.register.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.magicworld.dccomics.ui.favorites.FavoritesFragment"
+        android:label="Favoritos Superheroes"
+        tools:layout="@layout/favorites_fragment" />
+</navigation>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "768868754986",
+    "project_id": "dccomics-e4cd2",
+    "storage_bucket": "dccomics-e4cd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768868754986:android:246dd30019dc3a88a6c553",
+        "android_client_info": {
+          "package_name": "com.magicworld.dccomics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768868754986-7jc3q1r3lu2ttqiu1itgnoj53o5ud8bt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4-QpeVCU0YKCP6BHypBkfj5HuDChHAls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768868754986-7jc3q1r3lu2ttqiu1itgnoj53o5ud8bt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
